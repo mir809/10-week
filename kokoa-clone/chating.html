@@ -14,11 +14,13 @@
       <div class="status-bar_column">
         <span>No Service</span>
         <i class="fas fa-wifi"></i>
+        <i class="fas fa-map-marker-alt"></i>
       </div>
       <div class="status-bar_column">
         <span>18:43</span>
       </div>
       <div class="status-bar_column">
+        <i class="fas fa-volume-mute fa-lg"></i>
         <span>50%</span>
         <i class="fas fa-battery-half fa-lg"></i>
         <i class="fas fa-bolt"></i>
@@ -66,28 +68,109 @@
       </div>
     </main>
 
-    <form class="reply">
-      <div class="reply-column">
-        <i class="far fa-plus-square fa-2x"></i>
+    <form class="reply-keyboard">
+      <div class="reply">
+        <div class="reply-column">
+          <i class="far fa-plus-square fa-2x"></i>
+        </div>
+        <div class="reply-column">
+          <input type="text" placeholder="Write a message..." />
+          <i class="far fa-smile fa-2x"></i>
+          <div class="reply-button">
+            <i class="fas fa-arrow-up fa-2x"></i>
+          </div>
+        </div>
       </div>
-      <div class="reply-column">
-        <input type="text" placeholder="Write a message..." />
-        <i class="far fa-smile fa-2x"></i>
-        <button>
-          <i class="fas fa-arrow-up fa-2x"></i>
-        </button>
+      <div class="keyboard">
+        <div class="floor-1">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>0</div>
+        </div>
+        <div class="floor-2">
+          <div>ㅂ</div>
+          <div>ㅈ</div>
+          <div>ㄷ</div>
+          <div>ㄱ</div>
+          <div>ㅅ</div>
+          <div>ㅛ</div>
+          <div>ㅕ</div>
+          <div>ㅑ</div>
+          <div>ㅐ</div>
+          <div>ㅔ</div>
+        </div>
+        <div class="floor-3">
+          <div>ㅁ</div>
+          <div>ㄴ</div>
+          <div>ㅇ</div>
+          <div>ㄹ</div>
+          <div>ㅎ</div>
+          <div>ㅗ</div>
+          <div>ㅓ</div>
+          <div>ㅏ</div>
+          <div>ㅣ</div>
+        </div>
+        <div class="floor-4">
+          <div class="floor-4-icon">
+            <i class="fas fa-arrow-alt-circle-up"></i>
+          </div>
+          <div class="floor-4-text">
+            <div>ㅋ</div>
+            <div>ㅌ</div>
+            <div>ㅊ</div>
+            <div>ㅍ</div>
+            <div>ㅠ</div>
+            <div>ㅜ</div>
+            <div>ㅡ</div>
+          </div>
+          <div class="floor-4-icon">
+            <i class="fas fa-backspace"></i>
+          </div>
+        </div>
+        <div class="floor-5">
+          <div class="floor-5-icon">!#1</div>
+          <div class="floor-5-text">
+            <div>!</div>
+            <div class="keyboard-space">
+              <span>]</span>
+            </div>
+            <div>.</div>
+          </div>
+          <div class="floor-5-icon">
+            <i class="fas fa-level-down-alt"></i>
+          </div>
+        </div>
       </div>
     </form>
 
-    <div id="no-mobile">
+    <div id="no-mobile-big">
       <div>
-        <span>Oops, Your screen is too big</span>
+        <span>화면이 너무 커요,</span>
       </div>
       <div>
-        <span>(화면이 너무 커요)</span>
-        <i class="far fa-sad-tear"></i>
-        <i class="far fa-sad-cry"></i>
+        <span>화면의 가로 길이를 줄여주세요.</span>
         <i class="far fa-frown"></i>
+      </div>
+      <div>
+        <span>(Oops, Your screen is too big)</span>
+      </div>
+    </div>
+
+    <div id="no-mobile-small">
+      <div>화면이 너무 작아요,</div>
+      <div>
+        <span> 화면의 세로길이를 늘려주세요.</span>
+        <i class="far fa-sad-tear"></i>
+      </div>
+      <div>
+        <span>(Oops, Your screen is too small)</span>
       </div>
     </div>
 

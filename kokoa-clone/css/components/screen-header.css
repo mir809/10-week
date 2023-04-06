@@ -32,16 +32,16 @@
   right: -8px;
 }
 
-@keyframes rotateCog {
-  from {
-    transform: none;
+@keyframes Cog {
+  0% {
+    transform: rotateZ(0);
   }
 
-  to {
-    transform: rotatez(360deg);
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 
 .screen-header-icons .fa-cog:hover {
-  animation: rotateCog 2s ease-in-out infinite;
+  animation: Cog 1.2s ease-in-out infinite;
 }

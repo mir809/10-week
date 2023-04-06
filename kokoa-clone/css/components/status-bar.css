@@ -27,5 +27,14 @@
   align-items: center;
 }
 .status-bar_column .fa-battery-half {
-  margin: 0px 5px;
+  margin-right: 7px;
+  margin-left: 2px;
+}
+
+.status-bar_column:first-child i {
+  margin: 0 3px;
+}
+
+.status-bar_column:last-child i:first-child {
+  margin: 0 7px;
 }
