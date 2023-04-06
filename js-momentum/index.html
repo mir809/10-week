@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Momentum</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="https://nomadcoders.co/_next/image?url=https%3A%2F%2Fd1telmomo28umc.cloudfront.net%2Fmedia%2Fpublic%2Fbadges%2FJS.png&w=1920&q=75"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div id="today"></div>
+      <div id="weather" class="apple">
+        <div class="temp"></div>
+        <div class="city"></div>
+      </div>
+    </header>
+
+    <div class="null-space"></div>
+
+    <main>
+      <div class="main-box"></div>
+
+      <div class="time">
+        <h2 id="clock"></h2>
+      </div>
+
+      <div class="user">
+        <form id="login-form" class="hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+        </form>
+        <h1 id="greeting" class="apple"></h1>
+      </div>
+
+      <div class="todo">
+        <form id="todo-form">
+          <input required type="text" placeholder="What Should You Do Today?" />
+        </form>
+      </div>
+
+      <div id="quote" class="low">
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+
+    <div class="null-space"></div>
+
+    <footer>
+      <span> Log Out</span>
+      <span>Todo List</span>
+      <div class="Alarm hidden">
+        <span></span>
+        <div class="small-semo"></div>
+      </div>
+      <div class="todo-box hidden">
+        <div class="list-title">
+          <span>❤️ Todo List ❤️</span>
+        </div>
+        <div class="list-box">
+          <ul id="todo-list"></ul>
+        </div>
+        <div class="semo"></div>
+      </div>
+    </footer>
+
+    <script src="js/background.js"></script>
+    <script src="js/clock.js"></script>
+
+    <script src="js/todo.js"></script>
+    <script src="js/todo-list.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/today.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/log-out.js"></script>
+
+    <script src="js/greeting.js"></script>
+  </body>
+</html>

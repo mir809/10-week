@@ -1,0 +1,13 @@
+.main-screen-channel {
+  margin-top: 20px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.main-screen-channel-header {
+  margin-bottom: 20px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-text);
+}

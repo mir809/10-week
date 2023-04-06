@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends - kokoa talk</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/kakao.jpg" />
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar_column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar_column">
+        <span>50%</span>
+        <i class="fas fa-battery-half fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header-title">Friends</h1>
+      <div class="screen-header-icons">
+        <span><i class="fas fa-search fa-2x"></i></span>
+        <span><i class="fas fa-music fa-2x"></i></span>
+      </div>
+    </header>
+
+    <a id="friends-display-link">
+      <i class="fas fa-info-circle"></i>
+      Friends' Names Display
+      <i class="fas fa-chevron-right fa-xs"></i>
+    </a>
+
+    <main class="main-screen">
+      <div class="user-component">
+        <div class="user-component-column">
+          <img
+            src="https://mblogthumb-phinf.pstatic.net/20150427_261/ninevincent_1430122791768m7oO1_JPEG/kakao_1.jpg?type=w2"
+            class="user-component-avatar user-component-avatar--xl"
+          />
+          <div class="user-component-text">
+            <h4 class="user-component-title">User</h4>
+            <!--<h6 class="user-component-subtitle">This test text</h6>-->
+          </div>
+        </div>
+        <div class="user-component-column"></div>
+      </div>
+      <div class="main-screen-channel">
+        <div class="main-screen-channel-header">
+          <span>Channel</span>
+          <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+          <div class="user-component-column">
+            <img
+              src="https://mblogthumb-phinf.pstatic.net/20150427_261/ninevincent_1430122791768m7oO1_JPEG/kakao_1.jpg?type=w2"
+              class="user-component-avatar user-component-avatar--sm"
+            />
+            <div class="user-component-text">
+              <h4 class="user-component-title user-component-title--not-bold">
+                Channel
+              </h4>
+            </div>
+          </div>
+          <div class="user-component-column">
+            <div>
+              <span>2</span>
+              <i class="fas fa-chevron-right fa-xs"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nv-btn">
+          <a class="nav-link" href="friends.html">
+            <i class="fas fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nv-btn">
+          <a class="nav-link" href="chats.html">
+            <span class="nav-notification badge">1</span>
+            <i class="far fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nv-btn">
+          <a class="nav-link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nv-btn">
+          <a class="nav-link" href="more.html">
+            <div class="nav-dot"></div>
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <div>
+        <span>Oops, Your screen is too big</span>
+      </div>
+      <div>
+        <span>(화면이 너무 커요)</span>
+        <i class="far fa-sad-tear"></i>
+        <i class="far fa-sad-cry"></i>
+        <i class="far fa-frown"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f415d8287d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

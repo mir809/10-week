@@ -1,0 +1,14 @@
+.time {
+  display: flex;
+
+  justify-content: center;
+
+  text-shadow: -2px 2px 3px black;
+  font-family: "Lobster", cursive;
+
+  font-size: 150%;
+}
+
+#clock {
+  margin: 0;
+}

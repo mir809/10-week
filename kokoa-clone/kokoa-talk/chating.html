@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chating - kokoa talk</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/kakao.jpg" />
+  </head>
+
+  <body id="chating">
+    <div class="status-bar">
+      <div class="status-bar_column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar_column">
+        <span>50%</span>
+        <i class="fas fa-battery-half fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="ano-header">
+      <div class="ano-header-column">
+        <a href="chats.html">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+      <div class="ano-header-column">
+        <h1 class="ano-header-title">니꼬</h1>
+      </div>
+      <div class="ano-header-column">
+        <i class="fas fa-search fa-2x"></i>
+        <i class="fas fa-bars fa-lg"></i>
+      </div>
+    </header>
+
+    <main class="main-screen chating-screen">
+      <div class="chat-timestamp">Tuesday, June 30, 2020</div>
+
+      <div class="message-row">
+        <img
+          src="https://mblogthumb-phinf.pstatic.net/20150427_261/ninevincent_1430122791768m7oO1_JPEG/kakao_1.jpg?type=w2"
+        />
+        <div class="message-row-content">
+          <span class="message-author">Nico</span>
+          <div class="message-info">
+            <span class="message-bubble">Hi!</span>
+            <span class="message-time">21:27</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row-own">
+        <div class="message-row-content">
+          <div class="message-info">
+            <span class="message-bubble">What up?</span>
+            <span class="message-time">21:27</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply-column">
+        <i class="far fa-plus-square fa-2x"></i>
+      </div>
+      <div class="reply-column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="far fa-smile fa-2x"></i>
+        <button>
+          <i class="fas fa-arrow-up fa-2x"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <div>
+        <span>Oops, Your screen is too big</span>
+      </div>
+      <div>
+        <span>(화면이 너무 커요)</span>
+        <i class="far fa-sad-tear"></i>
+        <i class="far fa-sad-cry"></i>
+        <i class="far fa-frown"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f415d8287d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

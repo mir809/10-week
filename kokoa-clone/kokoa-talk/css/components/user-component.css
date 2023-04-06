@@ -1,0 +1,66 @@
+.user-component {
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.user-component,
+.user-component-column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-component-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 40%;
+  margin-right: 20px;
+}
+.user-component-avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component-avatar--sm {
+  width: 60px;
+  height: 60px;
+}
+
+.user-component-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.user-component-title--not-bold {
+  font-weight: 400;
+}
+
+.user-component-subtitle {
+  margin-top: 10px;
+  font-size: 17px;
+  color: var(--gray-text);
+}
+
+.user-component-column:last-child {
+  color: var(--gray-text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component-time {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.main-screen-channel > .user-component {
+  margin-top: 30px;
+}
+
+.more-column-icon {
+  color: #2e363e;
+}
+
+.user-component-subtitle i {
+  margin-left: 5px;
+  color: tomato;
+}

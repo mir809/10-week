@@ -1,0 +1,43 @@
+/* Components */
+@import "components/top-var.css";
+@import "components/clock.css";
+@import "components/user.css";
+@import "components/todo-input.css";
+@import "components/quote.css";
+@import "components/todo-list.css";
+@import "components/bottom-var.css";
+
+/* screen */
+@import "screen/snow.css";
+@import "screen/box.css";
+@import "screen/background.css";
+
+body {
+  color: whitesmoke;
+  overflow: hidden;
+  font-family: "Lobster", cursive;
+  margin: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.apple {
+  font-family: system-ui, -apple-system;
+}
+
+.filter {
+  filter: blur(5px);
+}
+
+.low {
+  z-index: -100;
+}

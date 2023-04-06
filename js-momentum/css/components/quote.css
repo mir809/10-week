@@ -1,0 +1,56 @@
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  transform: translateY(15px);
+
+  margin: 30px 0;
+
+  font-size: 50%;
+}
+
+#quote span:nth-child(2) {
+  position: absolute;
+  color: rgba(199, 199, 199, 0.7);
+  text-shadow: 1px 1px 1.5px gray;
+  opacity: 0;
+}
+
+@keyframes quoteup {
+  from {
+  }
+  to {
+    transform: translateY(-60%);
+  }
+}
+
+@keyframes authorDown {
+  from {
+  }
+  to {
+    opacity: 1;
+    transform: translateY(60%);
+  }
+}
+
+@keyframes quotedown {
+  from {
+    transform: translateY(-60%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes authorUp {
+  from {
+    opacity: 1;
+    transform: translateY(60%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+}

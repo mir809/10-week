@@ -1,0 +1,12 @@
+img {
+  z-index: -5;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  width: 100vw;
+  height: 100vh;
+} /*이미지를 웹사이트 배경사진이 되도록 만듦 */

@@ -1,0 +1,18 @@
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.chats-main {
+  padding: 0px 10px;
+}
+
+.onTheMouse {
+  padding: 10px 10px;
+}
+
+.onTheMouse:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+  padding: 10px 10px;
+}

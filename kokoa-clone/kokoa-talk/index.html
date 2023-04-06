@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome kokoa talk</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/kakao.jpg" />
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar_column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar_column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar_column">
+        <span>50%</span>
+        <i class="fas fa-battery-half fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-haeder">
+      <h1 class="welcome-header_title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header_text">
+        If you have a Kokoa Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form action="first-friends.html" method="get" id="login-form">
+      <input
+        required
+        name="username"
+        type="email"
+        placeholder="Email or phone number"
+      />
+      <input
+        required
+        name="password"
+        type="password"
+        placeholder="Password"
+        minlength="8"
+      />
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Account or Password</a>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big</span>
+      <i class="far fa-frown"></i>
+    </div>
+
+    <div id="no-mobile">
+      <div>
+        <span>Oops, Your screen is too big</span>
+      </div>
+      <div>
+        <span>(화면이 너무 커요)</span>
+        <i class="far fa-sad-tear"></i>
+        <i class="far fa-sad-cry"></i>
+        <i class="far fa-frown"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f415d8287d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
