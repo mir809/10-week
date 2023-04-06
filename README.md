@@ -1,5 +1,3 @@
 # 10 week study
 
-kokoa-clone
-js-momentum
-webtube
+kokoa-clone & js-momentum & webtube
