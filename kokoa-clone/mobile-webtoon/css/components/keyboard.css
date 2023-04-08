@@ -1,0 +1,130 @@
+.keyboard {
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background-color: rgb(213, 213, 213);
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.floor-1,
+.floor-2,
+.floor-3,
+.floor-4,
+.floor-5 {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.floor-1 > div,
+.floor-2 > div,
+.floor-3 > div,
+.floor-4-text > div,
+.floor-5-text > div {
+  width: 8vw;
+  background-color: white;
+
+  border-radius: 5px;
+
+  font-size: 5vw;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 1.5px gray;
+}
+
+.floor-1 {
+  height: 45px;
+}
+
+.floor-2,
+.floor-3,
+.floor-4,
+.floor-5 {
+  height: 52px;
+}
+
+.floor-1,
+.floor-2,
+.floor-4,
+.floor-5 {
+  padding: 0 2vw;
+}
+
+.floor-3 {
+  padding: 0 7vw;
+}
+
+.floor-4-text,
+.floor-5-text {
+  width: 69%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.floor-4-icon,
+.floor-5-icon {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
+  box-shadow: 0px 1.5px gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+}
+
+.floor-4-icon {
+  width: 12%;
+}
+
+.floor-5-icon {
+  width: 14%;
+}
+
+.floor-5-icon:first-child {
+  font-size: 4vw;
+  letter-spacing: 2px;
+}
+
+.floor-5-icon:last-child i {
+  rotate: 90deg;
+  font-size: 6vw;
+}
+
+.floor-4-icon:hover,
+.floor-5-icon:hover {
+  background-color: rgba(128, 128, 128, 0.6);
+  box-shadow: inset 1.5px 1.5px 2px rgba(128, 128, 128, 0.8);
+}
+
+.floor-1 > div:hover,
+.floor-2 > div:hover,
+.floor-3 > div:hover,
+.floor-4-text > div:hover,
+.floor-5-text > div:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+  box-shadow: inset 1.5px 1.5px 2px rgba(128, 128, 128, 0.8);
+}
+
+.floor-5-text > .keyboard-space {
+  width: 45vw;
+}
+
+.floor-5-text > .keyboard-space > span {
+  rotate: 90deg;
+  font-size: 7vw;
+}

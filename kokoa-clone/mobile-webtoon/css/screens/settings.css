@@ -1,0 +1,38 @@
+.settings-seting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-seting:last-child {
+  border: none;
+}
+
+.settings-list:last-child .settings-seting:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.settings-list {
+  margin-bottom: ;
+}
+
+.settings-seting i {
+  margin-right: 20px;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+.settings-seting .settings-seting-column:last-child {
+  opacity: 0.6;
+}
+
+.settings-list-cut {
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}

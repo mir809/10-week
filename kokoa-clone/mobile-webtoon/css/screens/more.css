@@ -1,0 +1,66 @@
+#more {
+  height: 130vh;
+}
+
+.more-screen .icon-row {
+  margin-top: 35px;
+}
+
+.icon-row-icon {
+  position: relative;
+}
+.more-icon-dot {
+  position: absolute;
+  right: 10px;
+  top: -3px;
+}
+
+.more-screen .icon-row-icon span {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.more-channel {
+  margin-top: 35px;
+}
+
+.more-channel .main-screen-channel-header {
+  color: #2e363e;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.more-channel-icons {
+  display: flex;
+}
+
+.more-channel-icon {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-channel-icon-image {
+  width: 60px;
+  height: 60px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15%;
+  margin-bottom: 15px;
+}
+
+.more-channel-icon-image i {
+  font-size: 30px;
+  color: white;
+}
+
+.more-channel-icon-text {
+  color: var(--gray-text);
+}

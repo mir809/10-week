@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/algorithm.css";
+@import "components/week-bar.css";
+@import "components/thumbnail.css";
+@import "components/keyboard.css";
+@import "components/search-var.css";
+
+@import "components/no-mobile.css";
+@import "components/splash-screen.css";
+
+/* screen */
+@import "screens/login.css";
+@import "screens/ing.css";
+@import "screens/searching.css";
+
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  color: #2e363e;
+}
+
+main {
+  padding-bottom: 80px;
+}
+
+.hidden {
+  visibility: hidden;
+}

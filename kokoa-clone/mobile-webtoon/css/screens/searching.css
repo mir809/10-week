@@ -1,0 +1,35 @@
+.search-delete {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.search-delete a {
+  color: blue;
+  opacity: 0.4;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.search-delete a:hover {
+  color: red;
+  opacity: 0.8;
+}
+
+.search-record {
+  padding: 0 20px;
+}
+
+.search-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.search-data > div:nth-child(2) {
+  color: rgba(0, 0, 0, 0.3);
+}
