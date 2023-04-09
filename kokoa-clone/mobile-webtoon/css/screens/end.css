@@ -1,0 +1,138 @@
+.recommend {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 20px;
+}
+
+.recommend > h1 {
+  color: black;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.recommend-list {
+  position: relative;
+
+  display: flex;
+  height: 250px;
+
+  overflow-x: scroll;
+  overflow-y: none;
+
+  padding: 10px 0;
+}
+
+.recommend-thumbnail {
+  width: 150px;
+  height: 200px;
+  margin: 0 10px;
+}
+
+.recommend-thumbnail > img {
+  width: 150px;
+}
+.recommend-thumbnail > div:nth-child(3) {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+
+  margin-top: 5px;
+}
+
+.recommend-number {
+  position: absolute;
+  top: 10px;
+
+  background-color: #00ee4b;
+
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 1.5px black;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 10px;
+}
+
+.thumbnail_column:hover .recommend-number {
+  animation: numberBigger 0.2s ease-in-out forwards;
+}
+
+@keyframes numberBigger {
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(1.05) translateX(-3px) translateY(-3px);
+  }
+}
+
+.end-list {
+  padding: 20px;
+}
+
+.end-list > a {
+  font-size: 14 px;
+  margin-right: 20px;
+}
+
+.end-list > a > i {
+  padding-left: 5px;
+  transform: translateY(-3px);
+}
+
+.end-list li {
+  width: 100%;
+  height: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+}
+
+.end-list li:hover {
+  border-color: var(--green);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.end-list-img > img {
+  max-height: 100%;
+  width: auto;
+
+  border-radius: 10px;
+}
+
+.end-list-text {
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.end-list-text > h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+.end-list-text > h2 {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.end-list-text > p {
+  width: 60vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.end-list-text > span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}

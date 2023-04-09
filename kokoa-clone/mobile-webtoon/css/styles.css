@@ -8,18 +8,19 @@
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
-@import "components/algorithm.css";
 @import "components/week-bar.css";
-@import "components/thumbnail.css";
 @import "components/keyboard.css";
 @import "components/search-var.css";
+@import "components/my-tab.css";
 
 @import "components/no-mobile.css";
 @import "components/splash-screen.css";
 
 /* screen */
 @import "screens/login.css";
-@import "screens/ing.css";
+@import "screens/algorithm.css";
+@import "screens/thumbnail.css";
+@import "screens/end.css";
 @import "screens/searching.css";
 
 body {

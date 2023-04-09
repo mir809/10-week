@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  margin-top: 10px;
 }
 
 .thumbnail_row {
@@ -50,6 +52,6 @@
   }
 }
 
-.thumbnail_column img:hover {
+.thumbnail_column:hover img {
   animation: imgBigger 0.2s ease-in-out forwards;
 }
