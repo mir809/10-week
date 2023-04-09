@@ -1,86 +1,137 @@
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
-
 body {
-  font-family: sans-serif;
-  background-color: #76c4c6;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-@keyframes dotAnimation {
-  50% {
-    transform: rotate(0.5turn);
-  }
-  100% {
-    transform: rotate(0.5turn);
-  }
-}
-
 .box {
-  width: 200px;
+  width: 300px;
+  height: 610px;
+  border: 5px solid #00c6ad;
+}
+.top-status {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 20px 20px;
+}
+.top-status_column {
+  width: 33%;
+}
+.top-status_column:first-child {
+  font-size: 30px;
+}
+.top-status_column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+  position: relative;
+  left: -10px;
+}
+.top-status_column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.dots {
-  width: 200px;
+.mugic {
   display: flex;
-  justify-content: space-around;
-  animation: dotAnimation 1s ease-in-out infinite;
-  margin-bottom: 200px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  line-height: 200%;
+}
+.mugic_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  color: white;
+  background-color: #ffbd11;
+  border: 3px solid black;
+  border-radius: 15px;
+}
+.mugic-header {
+  position: relative;
+  left: -20px;
+}
+.mugic-header_title {
+  font-size: 30px;
+  font-weight: 900;
 }
 
-.dot {
-  background-color: white;
-  width: 20px;
-  height: 20px;
+.button {
+  margin: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+}
+.button > div {
+  height: 45px;
+  border: 2px solid black;
+  border-bottom-width: 5px;
+}
+.button_play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
   border-radius: 10px;
-  /* 👆🏻 If you set the border-radius to half of the width and height 
-  it becomes a circle, 50% also works*/
+  font-weight: 900;
+}
+.fa-play {
+  margin-right: 5px;
+}
+.button_heart,
+.button_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 45px;
+  font-size: 23px;
 }
 
-.lines {
-  width: 150px;
+.playlist-another {
+  display: flex;
+  align-items: center;
+  margin: 35px 20px;
 }
-
-@keyframes lineAnim {
-  0% {
-    transform: none;
-  }
-  25% {
-    transform: scaleY(2);
-  }
-  50%,
-  100% {
-    transform: none;
-  }
+.playlist-another_img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
-
-.line {
-  width: 20px;
-  height: 80px;
-  background-color: white;
-  animation: lineAnim 1s ease-in-out infinite;
+.playlist-another:nth-child(1) .playlist-another_img {
+  background-color: #f85a2a;
 }
-
-/*
-Remove 'animation-delay and see what happens!!!
-*/
-
-.line:nth-child(2) {
-  animation-delay: 0.1s;
+.playlist-another:nth-child(2) .playlist-another_img {
+  background-color: #ff89bb;
 }
-.line:nth-child(3) {
-  animation-delay: 0.2s;
+.playlist-another:nth-child(3) .playlist-another_img {
+  background-color: #1947e5;
 }
-.line:nth-child(4) {
-  animation-delay: 0.3s;
+.playlist-another:nth-child(4) .playlist-another_img {
+  background-color: #00c6ad;
 }
-.line:nth-child(5) {
-  animation-delay: 0.4s;
+.playlist-another_header {
+  margin-left: 10px;
+  line-height: 120%;
+}
+.playlist-another_header_title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.playlist-another_header_text {
+  font-size: 12px;
+  font-weight: 900;
+  color: gray;
 }
