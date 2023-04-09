@@ -1,55 +1,99 @@
 body {
+  width: 100vw;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  width: 500px;
+  height: 500px;
+  background-color: skyblue;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-h1 {
-  margin-bottom: 50px;
-}
-
 section {
-  width: 50%;
-  margin: 0 auto;
+  width: 90px;
+  height: 100px;
+
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.color {
-  width: 48%;
-  position: relative;
-  margin-bottom: 20px;
+section:first-child {
+  margin-bottom: 50px;
+  animation: rotate 1s ease-in-out infinite;
 }
 
-.color:first-child .color__bg {
-  background-color: tomato;
+section:last-child {
+  width: 80px;
 }
 
-.color:nth-child(2) .color__bg {
-  background-color: teal;
-}
-
-.color:nth-child(3) .color__bg {
-  background-color: burlywood;
-}
-
-.color:last-child .color__bg {
-  background-color: thistle;
-}
-
-.color__bg {
-  height: 300px;
-  border: 5px solid white;
-}
-
-.color__info {
-  position: absolute;
-  width: 100%;
+.dot {
+  width: 10px;
+  height: 10px;
   background-color: white;
-  top: 20px;
-  padding: 0px 10px;
-  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.stick {
+  width: 10px;
+  height: 50px;
+  background-color: white;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+  }
+}
+
+.stick:nth-child(1) {
+  animation: scale 1s ease-in-out infinite;
+}
+.stick:nth-child(2) {
+  animation: scale 1s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+.stick:nth-child(3) {
+  animation: scale 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.stick:nth-child(4) {
+  animation: scale 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+.stick:nth-child(5) {
+  animation: scale 1s ease-in-out infinite;
+  animation-delay: 0.4s;
 }
