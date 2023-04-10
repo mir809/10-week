@@ -1,0 +1,43 @@
+.select-bar {
+  height: 40px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 138.8px;
+  z-index: 50;
+
+  box-sizing: border-box;
+  background-color: white;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.select-bar a {
+  font-size: 14px;
+}
+
+.selector > a {
+  padding-right: 15px;
+}
+
+.selector i {
+  padding-left: 5px;
+  transform: translateY(-3px);
+}
+
+.end-list > .select-bar > .edit {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.none-select {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.edit .fa-info-circle {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+}

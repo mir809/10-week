@@ -1,17 +1,28 @@
 .screen-header {
-  z-index: 5;
+  z-index: 88;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--horizontal-space);
-  padding-top: 20px;
+  padding: 15px;
 
-  position: sticky;
+  position: fixed;
   top: 26px;
   width: 100%;
   box-sizing: border-box;
 
   background-color: white;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.screen-header-title {
+  display: flex;
+  align-items: center;
+}
+.screen-header-title > h1 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 .cookie {
@@ -63,14 +74,13 @@
 
 .screen-header-icons {
   font-size: 13px;
-  margin-left: 20px;
 }
 
-.screen-header-title:hover .free-cookie {
+.screen-header-title > a:hover .free-cookie {
   opacity: 1;
 }
 
-.screen-header-title:hover .fa-cookie-bite {
+.screen-header-title > a:hover .fa-cookie-bite {
   animation: cookieBigger 0.3s ease-in-out forwards;
 }
 
@@ -101,4 +111,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.my-cookie {
+  color: var(--green);
+  font-size: 15px;
+  margin-right: 20px;
 }

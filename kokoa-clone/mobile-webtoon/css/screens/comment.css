@@ -1,0 +1,133 @@
+.my-4 {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.comments-section {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.comments-box {
+  height: 100px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-box > div {
+  height: 35px;
+  width: 33%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-box > div:nth-child(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comments-box > div > span {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.comments-box > div > h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.comments-list {
+  width: 100%;
+
+  color: black;
+}
+
+.comments-list > li {
+  width: 100%;
+
+  margin-top: 15px;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comments-list > li > div {
+  display: flex;
+  align-items: center;
+}
+
+.comments-list > li > div:nth-child(1) {
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.comments-list > li > span {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.comments-list > li > div:nth-child(3) {
+  align-items: start;
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.comments-list > li img {
+  width: 80px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.comments-list > li > div:nth-child(3) > a {
+  margin-top: 5px;
+}
+
+.comments-list > li > div:nth-child(4) {
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+
+  font-size: 15px;
+}
+.comments-list > li > div:nth-child(4) > button {
+  background-color: white;
+  padding: 3px 7px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+}
+.comments-list > li > div:nth-child(4) > button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.comments-list > li > div:nth-child(4) > div {
+  display: flex;
+}
+
+.comments-list > li > div:nth-child(4) > div > div {
+  margin-left: 30px;
+  color: rgba(0, 0, 0, 0.8);
+}

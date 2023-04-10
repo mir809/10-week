@@ -1,7 +1,13 @@
 .my-tab {
-  font-size: 15px;
+  position: fixed;
+  top: 88.8px;
+
+  font-size: 20px;
   justify-content: space-between;
   padding: 0 25px;
+
+  background-color: white;
+  z-index: 5;
 }
 
 .my-tab > div {

@@ -12,6 +12,7 @@
 @import "components/keyboard.css";
 @import "components/search-var.css";
 @import "components/my-tab.css";
+@import "components/select-bar.css";
 
 @import "components/no-mobile.css";
 @import "components/splash-screen.css";
@@ -22,15 +23,36 @@
 @import "screens/thumbnail.css";
 @import "screens/end.css";
 @import "screens/searching.css";
+@import "screens/my.css";
+@import "screens/comment.css";
 
 body {
   height: 100vh;
   font-family: "Open Sans", sans-serif;
   color: #2e363e;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
-main {
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main-screen {
   padding-bottom: 80px;
+  transform: translateY(88.8px);
+  z-index: 0;
+}
+
+.end-select-bar {
+  position: sticky;
+  top: 0;
+
+  padding-bottom: 20px;
+
+  background-color: white;
+  z-index: 3;
 }
 
 .hidden {
