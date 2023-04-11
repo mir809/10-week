@@ -16,6 +16,7 @@
 
 @import "components/no-mobile.css";
 @import "components/splash-screen.css";
+@import "components/badge.css";
 
 /* screen */
 @import "screens/login.css";
@@ -25,6 +26,8 @@
 @import "screens/searching.css";
 @import "screens/my.css";
 @import "screens/comment.css";
+@import "screens/more.css";
+@import "screens/settings.css";
 
 body {
   height: 100vh;

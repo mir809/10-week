@@ -1,0 +1,11 @@
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--yellow-green);
+
+  border-radius: 50%;
+
+  top: 0;
+  right: -12px;
+}

@@ -1,38 +1,116 @@
-.settings-seting {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.settings-screen {
+  padding: 0;
+  transform: translateY(88.8px);
+  z-index: 0;
 }
 
-.settings-seting:last-child {
-  border: none;
-}
-
-.settings-list:last-child .settings-seting:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.settings-header > .screen-header-title > h1 {
+  margin-left: 15px;
 }
 
 .settings-list {
-  margin-bottom: ;
-}
-
-.settings-seting i {
-  margin-right: 20px;
-  font-size: 22px;
-  opacity: 0.8;
-}
-
-.settings-seting .settings-seting-column:last-child {
-  opacity: 0.6;
-}
-
-.settings-list-cut {
-  height: 1px;
   width: 100%;
-  margin: 20px 0;
-  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-list-header {
+  padding: 15px 20px;
+
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.settings-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.settings-list > li > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+
+  padding: 25px 0;
+}
+
+.settings-list > li > div > span:nth-child(2),
+.settings-list > li > div > span:nth-child(3) {
+  font-weight: 100;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.settings-list > li > div > span:nth-child(3) {
+  margin-top: 0px;
+}
+
+.check_box > span {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/*인터넷에서 검색 - 체크박스*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+/* label:before에 체크하기 전 상태 CSS */
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--green);
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+/* label:before에 체크 된 상태 CSS */
+input[type="checkbox"]:checked + label:before {
+  content: "✔";
+  background-color: var(--green);
+  border-color: var(--green);
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  color: white;
+}
+/*인터넷에서 검색 - 체크박스  */
+
+.settings-list > li > .version {
+  display: flex;
+  flex-direction: row;
+}
+
+.settings-list > li > .version > span:nth-child(2) {
+  margin: 0px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
 }
