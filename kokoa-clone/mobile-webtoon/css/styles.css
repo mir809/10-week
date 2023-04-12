@@ -28,6 +28,7 @@
 @import "screens/comment.css";
 @import "screens/more.css";
 @import "screens/settings.css";
+@import "screens/log-out.css";
 
 body {
   height: 100vh;

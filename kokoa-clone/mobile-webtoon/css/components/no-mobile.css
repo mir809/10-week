@@ -5,7 +5,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--green);
+  background: linear-gradient(180deg, #1bfa0f, var(--green));
   display: flex;
   flex-direction: column;
 
@@ -15,22 +15,12 @@
 }
 
 #no-mobile-small {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 #no-mobile-big > div,
 #no-mobile-small > div {
   margin: 5px;
-}
-
-#no-mobile-big i {
-  font-size: 40px;
-  margin-left: 10px;
-}
-
-#no-mobile-small i {
-  font-size: 30px;
-  margin-left: 5px;
 }
 
 @media screen and (max-width: 550px) {
@@ -39,7 +29,7 @@
   }
 }
 
-@media screen and (min-height: 1px) {
+@media screen and (min-height: 320px) {
   #no-mobile-small {
     display: none;
   }
