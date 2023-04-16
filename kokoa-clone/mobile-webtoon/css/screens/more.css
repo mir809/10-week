@@ -80,6 +80,12 @@
   justify-content: center;
 
   position: relative;
+
+  width: 55px;
+  height: 55px;
+  padding: 7px;
+
+  border-radius: 33%;
 }
 
 .icons-column > span {
@@ -90,33 +96,80 @@
 .icons-column a {
   position: relative;
 }
-.icons-column a > span {
+.icons-column i > span {
   position: absolute;
-  top: 8px;
-  left: 4.5px;
+  top: 15px;
+  left: 24px;
 
-  font-size: 13px;
+  font-size: 10px;
 }
 
-.icons-row:nth-child(1) .icons-column:nth-child(1) a {
+.icons-row:nth-child(1) .icons-column:nth-child(1) {
   color: var(--green);
 }
-.icons-row:nth-child(1) .icons-column:nth-child(2) a {
+.icons-row:nth-child(1) .icons-column:nth-child(2) {
   color: rgb(255, 166, 0);
 }
-.icons-row:nth-child(1) .icons-column:nth-child(3) a {
+.icons-row:nth-child(1) .icons-column:nth-child(3) {
   color: skyblue;
 }
-.icons-row:nth-child(1) .icons-column:nth-child(4) a {
+.icons-row:nth-child(1) .icons-column:nth-child(4) {
   color: yellowgreen;
 }
-
-.icons-row:nth-child(2) .icons-column:nth-child(1) a {
+.icons-row:nth-child(2) .icons-column:nth-child(1) {
   color: plum;
 }
-.icons-row:nth-child(2) .icons-column:nth-child(2) a {
+.icons-row:nth-child(2) .icons-column:nth-child(2) {
   color: orangered;
 }
-.icons-row:nth-child(2) .icons-column:nth-child(3) a {
+.icons-row:nth-child(2) .icons-column:nth-child(3) {
   color: gray;
+}
+
+.icons-column:hover {
+  animation: hover-scaleUp 0.2s linear forwards;
+}
+.icons-row:nth-child(1) .icons-column:nth-child(1):hover {
+  background-color: var(--green);
+  color: white;
+}
+.icons-row:nth-child(1) .icons-column:nth-child(2):hover {
+  background-color: rgb(255, 166, 0);
+  color: white;
+}
+.icons-row:nth-child(1) .icons-column:nth-child(3):hover {
+  background-color: skyblue;
+  color: white;
+}
+.icons-row:nth-child(1) .icons-column:nth-child(4):hover {
+  background-color: yellowgreen;
+  color: white;
+}
+.icons-row:nth-child(2) .icons-column:nth-child(1):hover {
+  background-color: plum;
+  color: white;
+}
+.icons-row:nth-child(2) .icons-column:nth-child(2):hover {
+  background-color: orangered;
+  color: white;
+}
+.icons-row:nth-child(2) .icons-column:nth-child(3):hover {
+  background-color: gray;
+  color: white;
+}
+
+.icons-row:nth-child(1) .icons-column:nth-child(1):hover > i {
+  animation: searchIcon 1s linear infinite;
+}
+.icons-row:nth-child(2) .icons-column:nth-child(3):hover > i {
+  animation: cogRotate 2s ease-in-out infinite;
+}
+
+@keyframes cogRotate {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -54,9 +54,19 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+.logOut-answer > div > a {
+  padding: 20px;
+}
+
 .logOut-answer > div > a:hover {
   color: var(--green);
 }
 .logOut-answer div:first-child {
   border-right: 0.5px solid var(--green);
+}
+
+.log-out-back .nv-btn {
+  animation: none;
+  transform: none;
+  opacity: 1;
 }

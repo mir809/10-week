@@ -50,6 +50,35 @@
 .my-list > li > div:last-child .fa-bell {
   font-size: 20px;
   color: var(--green);
+  will-change: transform;
+}
+
+.my-list > li > div:last-child .fa-bell:hover {
+  cursor: pointer;
+  animation: bell 1s linear infinite;
+}
+
+@keyframes bell {
+  0% {
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.2) rotate(30deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-30deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  70% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .my-list > li > div:last-child > div:last-child {

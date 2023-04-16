@@ -21,19 +21,23 @@
   opacity: 0.8;
 }
 
-.search-record {
-  padding: 0 20px;
-}
-
 .search-data {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 20px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
 }
 
+.search-data:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .search-data > div:nth-child(2) {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.search-data > div:nth-child(2):hover {
+  cursor: pointer;
 }

@@ -120,3 +120,31 @@
   font-size: 15px;
   margin-right: 20px;
 }
+
+.screen-header-icons:not(.search-icon) a:hover {
+  color: var(--green);
+  animation: searchIcon 1s linear infinite;
+}
+
+@keyframes searchIcon {
+  0% {
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(1.2) rotate(30deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-30deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  70% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
