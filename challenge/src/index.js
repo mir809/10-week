@@ -1,32 +1,27 @@
-const colors = [
-  "#ef5777",
-  "#575fcf",
-  "#4bcffa",
-  "#34e7e4",
-  "#0be881",
-  "#f53b57",
-  "#3c40c6",
-  "#0fbcf9",
-  "#00d8d6",
-  "#05c46b",
-  "#ffc048",
-  "#ffdd59",
-  "#ff5e57",
-  "#d2dae2",
-  "#485460",
-  "#ffa801",
-  "#ffd32a",
-  "#ff3f34",
-];
-const btn = document.querySelector("button");
+const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 
-function handleClick() {
-  const a = colors[Math.floor(Math.random() * colors.length)];
-  const b = colors[Math.floor(Math.random() * colors.length)];
-  if (a === b) {
-    return handleClick();
-  }
-  document.body.style.background = `linear-gradient(to left, ${a}, ${b})`;
-}
+const hello = document.querySelector("h2");
 
-btn.addEventListener("click", handleClick);
+const superEventHandler = {
+  enter: () => {
+    hello.style.color = colors[0];
+    hello.innerText = "You mouse is here!";
+  },
+  leave: () => {
+    hello.style.color = colors[1];
+    hello.innerText = "You mouse is gone!";
+  },
+  resize: () => {
+    hello.style.color = colors[2];
+    hello.innerText = "You just resized";
+  },
+  right: () => {
+    hello.style.color = colors[3];
+    hello.innerText = "That was a right click!";
+  },
+};
+
+hello.addEventListener("mouseenter", superEventHandler.enter);
+hello.addEventListener("mouseleave", superEventHandler.leave);
+window.addEventListener("resize", superEventHandler.resize);
+window.addEventListener("contextmenu", superEventHandler.right);
