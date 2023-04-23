@@ -1,17 +1,34 @@
-const background = document.querySelector("body");
+const btn = document.querySelector("button");
+const generate = document.querySelector(".generate");
+const guess = document.querySelector(".guess");
 
-function resize() {
-  const width = window.innerWidth;
+const you = document.querySelector(".select-number");
+const machine = document.querySelector(".random-number");
+const victory = document.querySelector(".victory");
 
-  if (width <= 600) {
-    background.style.backgroundColor = "skyblue";
-  } else if (width > 600 && width <= 900) {
-    background.style.backgroundColor = "violet";
+const hidden = document.querySelector(".hidden");
+
+hidden.style.display = "none";
+
+function result(event) {
+  event.preventDefault();
+  hidden.style.display = "contents";
+
+  const genNum = parseInt(generate.value);
+  const guessNum = parseInt(guess.value);
+
+  const random = parseInt(Math.ceil(Math.random() * genNum));
+
+  you.innerText = guessNum;
+  machine.innerText = random;
+
+  if (guessNum === random) {
+    victory.innerText = "You win!";
+    victory.style.fontWeight = "600";
   } else {
-    background.style.backgroundColor = "orange";
+    victory.innerText = "You lost!";
+    victory.style.fontWeight = "100";
   }
 }
 
-resize();
-
-window.addEventListener("resize", resize);
+btn.addEventListener("click", result);

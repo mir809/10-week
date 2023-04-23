@@ -6,7 +6,25 @@
   </head>
 
   <body>
-    <h2 style="color: white">Hello!</h2>
+    <h1>Random Number Game</h1>
+    <form>
+      <h4>
+        <label for="">Generate a number between 0 and</label>
+        <input class="generate" type="number" required />
+      </h4>
+      <div>
+        <label for="">Guess the number</label>
+        <input class="guess" type="number" required />
+        <button>play!</button>
+      </div>
+    </form>
+    <div class="hidden">
+      <p>
+        You chose: <span class="select-number"></span> , the machine chose:
+        <span class="random-number"></span>
+      </p>
+      <span class="victory"></span>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
