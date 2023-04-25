@@ -1,22 +1,20 @@
-const guessForm = document.getElementById("js-guess");
-const result = document.getElementById("js-result");
-const maxNumber = document.getElementById("maxNumber");
+const clockTitle = document.querySelector(".js-clock");
 
-function handleGuessSubmit(e) {
-  e.preventDefault();
-  const guessInput = guessForm.querySelector("input");
-  if (guessInput.value === "" && maxNumber === "") {
-    return;
-  }
-  const max = maxNumber.value;
-  const random = Math.ceil(Math.random() * max);
-  const userGuess = parseInt(guessInput.value, 10);
-  const resultSpan = result.querySelector("span");
-  resultSpan.innerHTML = `
-  You chose: ${userGuess},
-  the machine chose: ${random}.<br />
-  <strong>${userGuess === random ? "You won!" : "You lost!"}</strong>
-  `;
+function getClock() {
+  const today = new Date();
+  const years = today.getFullYear();
+  const Christmas = new Date(`${years}-12-25`);
+  const diff = Christmas - today - 1000 * 60 * 60 * 9;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(
+    2,
+    "0"
+  );
+  const min = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+  const sec = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+  clockTitle.innerText = `${days}d ${hours}h ${min}m ${sec}s`;
 }
 
-guessForm.addEventListener("submit", handleGuessSubmit);
+getClock();
+setInterval(getClock, 1000);
