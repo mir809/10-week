@@ -2,41 +2,35 @@ import express from "express";
 
 const app = express();
 
-let now = new Date();
-let year = now.getFullYear();
-let month = now.getMonth();
-let day = now.getDate();
-
-const url = (req, res, next) => {
-  console.log(`Path : ${req.url}`);
+const URLLogger = (req, res, next) => {
+  console.log("Path: ", req.path);
   next();
 };
 
-const time = (req, res, next) => {
-  console.log(`Time : ${year}년 ${month}월 ${day}일`);
+const timeLogger = (req, res, next) => {
+  const now = new Date();
+  console.log(`Time: ${now.getFullYear()}.${now.getMonth()}.${now.getDate()}`);
   next();
 };
 
-const security = (req, res, next) => {
+const protectorLogger = (req, res, next) => {
+  if (req.path === "/protected") {
+    return res.send("<h1>Forbidden</h1>");
+  }
+  next();
+};
+
+const secureLogger = (req, res, next) => {
   if (req.protocol === "https") {
-    console.log(`Now Protocol : ${req.protocol} => secure`);
+    console.log("Secure ✅");
   } else {
-    console.log(`Now Protocol : ${req.protocol} => insecure`);
+    console.log("Insecure ❌");
   }
   next();
 };
 
-const protector = (req, res, next) => {
-  if (req.url === "/protected") {
-    return res.redirect("/");
-  }
-  next();
-};
-
-app.use(url, time, security, protector);
-
-app.get("/", (req, res) => res.send("<h1>Home</h1>"));
+app.use(URLLogger, timeLogger, secureLogger, protectorLogger);
+app.get("/", (req, res) => res.send("<h1>Home!</h1>"));
 app.get("/protected", (req, res) => res.send("<h1>Protected</h1>"));
 
-// Codesandbox gives us a PORT :)
-app.listen(process.env.PORT, () => `Listening!✅`);
+app.listen(() => `Listening!✅`);
