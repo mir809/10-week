@@ -6,6 +6,6 @@ export const login = (req, res) => res.send("Log in");
 // users
 export const users = (req, res) => res.send("Users");
 
-export const profile = (req, res) => res.send("Profile");
+export const profile = (req, res) => res.send(`${req.params.id} Profile`);
 
 export const editProfile = (req, res) => res.send("Edit Profile");
