@@ -1,6 +1,18 @@
-export const join = (req, res) => res.send("<h1>join</h1>");
-export const login = (req, res) => res.send("<h1>login</h1>");
-export const seeUsers = (req, res) => res.send("<h1>seeUsers</h1>");
-export const seeUser = (req, res) =>
-  res.send(`<h1>seeUser: ${req.params.id}</h1>`);
-export const editProfile = (req, res) => res.send("<h1>editProfile</h1>");
+export const join = (req, res) =>
+  res.render("users/join", { pageTitle: "Join" });
+
+export const login = (req, res) =>
+  res.render("users/login", { pageTitle: "Log in" });
+
+export const seeUsers = (req, res) =>
+  res.render("users/usersList", { pageTitle: "Users List" });
+
+export const seeUser = (req, res) => {
+  const { id } = req.params;
+  return res.render("users/profile", { pageTitle: "Profile", id });
+};
+
+export const editProfile = (req, res) => {
+  const { id } = req.params;
+  return res.render("users/profileEdit", { pageTitle: "Edit Profile", id });
+};
