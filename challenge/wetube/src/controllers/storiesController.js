@@ -1,23 +1,9 @@
-export const home = (req, res) =>
-  res.render("stories/home", { pageTitle: "Home" });
-
-export const trending = (req, res) =>
-  res.render("stories/trending", { pageTitle: "Trending" });
-
-export const newStories = (req, res) =>
-  res.render("stories/new", { pageTitle: "New Story" });
-
-export const seeStory = (req, res) => {
-  const { id } = req.params;
-  return res.render("stories/story", { pageTitle: "See Story", id });
-};
-
-export const editStory = (req, res) => {
-  const { id } = req.params;
-  return res.render("stories/storyEdit", { pageTitle: "Edit Story", id });
-};
-
-export const deleteStory = (req, res) => {
-  const { id } = req.params;
-  return res.render("stories/storyDelete", { pageTitle: "Delete Story", id });
-};
+export const home = (req, res) => res.render("home", {pageTitle: "Home"})
+export const trending = (req, res) => res.render("trending", {pageTitle: "Trending"})
+export const newStories = (req, res) => res.render("stories", {pageTitle: "Stories"})
+export const seeStory = (req, res) =>
+  res.render("story", {pageTitle: "Story"})
+export const editStory = (req, res) =>
+  res.render("editStory", {pageTitle: "Edit Story"})
+export const deleteStory = (req, res) =>
+  res.render("deleteStory", {pageTitle: "Delete Story"})

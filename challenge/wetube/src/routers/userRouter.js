@@ -6,6 +6,6 @@ const userRouter = express.Router();
 
 userRouter.get("/", seeUsers);
 userRouter.get("/:id", seeUser);
-userRouter.get("/:id/edit-profile", editProfile);
+userRouter.get("/edit-profile", editProfile);
 
 export default userRouter;

@@ -3,7 +3,7 @@ import express from "express";
 import {
   seeStory,
   editStory,
-  deleteStory,
+  deleteStory
 } from "../controllers/storiesController";
 
 const storyRouter = express.Router();
