@@ -5,3 +5,8 @@ https://codesandbox.io/p/sandbox/a06blueprint-forked-lb0pcg?selection=%5B%7B%22e
 
 답안
 https://codesandbox.io/s/a06solutions-k3irz
+
+----------------------------------------------------
+
+ #5.7 to #6.6 (05.10)
+https://codesandbox.io/s/express-controller-blueprint-forked-potyjq?file=/src/views/search.pug

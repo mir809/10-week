@@ -1,0 +1,12 @@
+extends layouts/layout
+include mixins/movieGenre
+
+block title
+    h1=movie.title
+
+block content
+    p=movie.summary
+    ul
+        each genre in movie.genres
+            +genre(genre)
+    

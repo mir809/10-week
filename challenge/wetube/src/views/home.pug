@@ -1,4 +1,13 @@
 extends layouts/layout
+include mixins/movies
+
+block title
+    h1 Movies!
 
 block content
-  h1=pageTitle
+    form(method="get" action="/filter")
+        input(name="year", placeholder="Filter by year", type="number")
+        input(name="rating", placeholder="Filter by rating(0~10)",type="number")
+        input(type="submit", value="Search")
+    each movie in movieList
+        +movie(movie)
