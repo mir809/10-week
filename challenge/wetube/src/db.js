@@ -2,7 +2,7 @@
 
 import axios from "axios";
 let movies = [];
-const YIFY_URL = "https://yts.mx/api/v2/";
+const YIFY_URL = "https://yts.lt/api/v2/";
 const client = axios.create({
   baseURL: YIFY_URL
 });

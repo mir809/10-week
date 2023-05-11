@@ -18,3 +18,6 @@ https://codesandbox.io/s/a08solution-o8wbx?file=/src/views/404.pug
 
  #5.7 to #6.6 (05.11)
 https://codesandbox.io/s/a09blueprint-forked-rhgmi9
+
+답안
+https://codesandbox.io/s/a09solution-lwmj2
