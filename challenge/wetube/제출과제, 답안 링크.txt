@@ -21,3 +21,8 @@ https://codesandbox.io/s/a09blueprint-forked-rhgmi9
 
 답안
 https://codesandbox.io/s/a09solution-lwmj2
+
+-------------------------------------------------------
+
+ #6.7 to #6.10 (05.12)
+https://codesandbox.io/s/a10blueprint-forked-s8hovx?file=/src/models/Movie.js
