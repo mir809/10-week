@@ -10,3 +10,8 @@ https://codesandbox.io/s/a06solutions-k3irz
 
  #5.7 to #6.6 (05.10)
 https://codesandbox.io/s/express-controller-blueprint-forked-potyjq?file=/src/views/search.pug
+
+답안 
+https://codesandbox.io/s/a08solution-o8wbx?file=/src/views/404.pug
+
+-------------------------------------------------------
