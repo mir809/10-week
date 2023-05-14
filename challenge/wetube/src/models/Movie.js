@@ -1,15 +1,31 @@
 import mongoose from "mongoose";
 
-const movieSchema = new mongoose.Schema({
-  title: { type: String, required: true, trim: true },
-  summary: { type: String, required: true, trim: true },
-  genres: [{ type: String, require: true, trim: true }]
-
-  year: { type: Date, required: true, default: Date.getFullYear },
-  rating: { type: Number, required: true,trim: true },
-
+// Create a Movie Model here.
+const MovieSchema = mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  summary: {
+    type: String,
+    required: true
+  },
+  year: {
+    type: Number,
+    required: true
+  },
+  rating: {
+    type: Number,
+    required: true
+  },
+  genres: [
+    {
+      type: String,
+      required: true
+    }
+  ]
 });
 
-const movieModel = mongoose.model("Movie", movieSchema);
+const Movie = mongoose.model("Movie", MovieSchema);
 
-export default movieModel;
+export default Movie;
