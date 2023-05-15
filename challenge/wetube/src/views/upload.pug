@@ -1,0 +1,10 @@
+extends layouts/layout
+
+block content 
+  form(method="post")
+    input(name="title", placeholder="Title", maxlength=80, required)
+    input(name="summary", placeholder="Summary", required) 
+    input(name="year", placeholder="Release Year (Only Number)", max=nowYear type="number" required) 
+    input(name="rating", placeholder="Rating (0~10)",type="number" min="0" max="10" required) 
+    input(name="genres", placeholder="Genres, separated by comma.") 
+    input(type="submit", value="Upload")
