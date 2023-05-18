@@ -33,6 +33,14 @@ https://codesandbox.io/s/a10solution-forked-vmd4i?file=/src/models/Movie.js
 -------------------------------------------------------
 
 #6.11 ~ #6.28 (05.15) 
-https://codesandbox.io/s/a10blueprint-forked-s8hovx?file=/src/models/Movie.js
+https://codesandbox.io/s/a11blueprint-forked-8getuy?file=/src/movieController.js:1838-1855
+https://codesandbox.io/s/a11blueprint-forked-8getuy
+
+답안
+
+------------------------------------------------------------
+
+ #7.0 to #7.11 (05.18)
+https://codesandbox.io/p/sandbox/a13blueprint-forked-5rb2pk?file=%2Fsrc%2FuserController.js%3A8%2C24
 
 답안
