@@ -1,12 +1,8 @@
-extends layouts/layout
-include mixins/movies
-
+extends templates/layout
 
 block content
-    ul
-        each movieInfo  in movies
-            +movie(movieInfo)
-            
-        else 
-            h3 업로드된 영화가 없습니다.
-
+  h2 #{loggedInUser.name}'s Profile
+  ul
+    li Name : #{loggedInUser.name}
+    li Username : #{loggedInUser.username}
+  hr
