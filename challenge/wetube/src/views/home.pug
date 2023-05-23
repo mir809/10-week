@@ -1,8 +1,16 @@
-extends templates/layout
+extends base
 
 block content
-  h2 #{loggedInUser.name}'s Profile
-  ul
-    li Name : #{loggedInUser.name}
-    li Username : #{loggedInUser.username}
-  hr
+    if errorMessage
+        h2=errorMessage
+    form(action="/read" method="post" enctype="multipart/form-data" )
+        input(name="text" type="file" id="text" accept="text/*" required)
+        small 업로드 가능한 최대용량은 1MB입니다.
+        input(type="submit", value="Convert!",)
+    if files
+        each file in files 
+            li
+                a(href=`read/${file}`)=file
+    else
+        span 업로드된 txt파일이 없습니다.    
+        

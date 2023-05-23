@@ -46,3 +46,7 @@ https://codesandbox.io/p/sandbox/a13blueprint-forked-5rb2pk?file=%2Fsrc%2FuserCo
 답안
 https://codesandbox.io/s/a13solution-forked-wsxhd
 
+------------------------------------------------------------
+
+ #8.6 ~ #8.9 (05.18)
+https://codesandbox.io/s/a15blueprint-forked-u94c58?file=/src/index.js
