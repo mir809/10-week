@@ -1,16 +1,19 @@
-extends base
-
-block content
-    if errorMessage
-        h2=errorMessage
-    form(action="/read" method="post" enctype="multipart/form-data" )
-        input(name="text" type="file" id="text" accept="text/*" required)
-        small 업로드 가능한 최대용량은 1MB입니다.
-        input(type="submit", value="Convert!",)
-    if files
-        each file in files 
-            li
-                a(href=`read/${file}`)=file
-    else
-        span 업로드된 txt파일이 없습니다.    
-        
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title WETUBE Challenge!
+  body
+    header
+      h1 Text to HTML!
+    main
+      form(method="POST" enctype="multipart/form-data")        
+        input(type="file", name="text", accept=".txt")
+        input(type="submit", value="convert!")
+      div
+        each filename in fileNameList
+          a(href="/read/" + filename) #{filename.split("-")[0]}
+          br
+    

@@ -9,64 +9,49 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/uploads", express.static("uploads"));
-
+// Middlewares
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads/");
+    cb(null, "uploads");
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname);
+    cb(null, file.originalname + "-" + Date.now());
   }
 });
 
-const upload = multer({
-  storage: storage,
-  limits: {
-    fileSize: 1000000 // 파일 용량 제한: 1MB (단위: byte)
-  }
-});
+const uploadFiles = multer({ storage });
 
-const home = (req, res) => {
-  fs.readdir(`uploads`, (err, files) => {
+// Controllers
+const getText = (req, res) => {
+  fs.readdir("uploads", (err, data) => {
     if (err) {
       console.log(err);
-      return res.status(400).end();
+      throw err;
     }
-    return res.render("home", { pageTitle: "TXT2HTML!", files });
+    return res.render("home", { fileNameList: data });
   });
 };
 
-const read = (req, res) => {
-  const { file } = req;
-  const path = file.path;
-
-  fs.readFile(path, "utf8", (err, data) => {
-    if (err) {
-      const errorMessage = "Failed Convert";
-      return res.render("read", { pageTitle: "READ TEXT FILE", errorMessage });
-    } else {
-      return res.render("read", { pageTitle: "READ TEXT FILE", data });
-    }
-  });
+const postText = (req, res) => {
+  const { filename } = req.file;
+  return res.redirect(`/read/${filename}`);
 };
 
-const getRead = (req, res) => {
+const showText = (req, res) => {
   const { id } = req.params;
-  const path = `uploads/` + id;
-
+  const path = "uploads/" + id;
   fs.readFile(path, "utf8", (err, data) => {
     if (err) {
-      const errorMessage = "Failed Convert";
-      return res.render("read", { pageTitle: "READ TEXT FILE", errorMessage });
-    } else {
-      return res.render("read", { pageTitle: "READ TEXT FILE", data });
+      console.log(err);
+      throw err;
     }
+    return res.send(data);
   });
 };
-app.get("/", home);
-app.post("/read", upload.single("text"), read);
-app.get("/read/:id", getRead);
+
+//Routers
+app.route("/").get(getText).post(uploadFiles.single("text"), postText);
+app.get("/read/:id", showText);
 
 // Codesanbox does not need PORT :)
-app.listen();
+app.listen(() => console.log(`Listening!`));
