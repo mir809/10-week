@@ -73,6 +73,8 @@ const timeUpdate = () => {
   currentTime.innerText = formatTime(Math.floor(video.currentTime));
 
   timeline.value = Math.floor(video.currentTime);
+
+  totalTime.innerText = formatTime(Math.floor(video.duration));
 };
 
 const loadedMetaData = async () => {
@@ -114,6 +116,20 @@ const fullScreenClick = () => {
   }
 };
 
+const WindowKeyDown = (event) => {
+  if (event.code === "KeyF") {
+    fullScreenClick();
+  } // F : 동영상 전체화면/전체화면 해제
+  if (event.code === "Escape") {
+    const fullScreen = document.fullscreenElement;
+    //현재 전체화면상태인지 파악
+    if (fullScreen) {
+      document.exitFullscreen(); //전체화면 해제
+      fullScreenBtn.innerText = "전체화면";
+    }
+  } // Esc :전체화면 상태인 경우 전체화면 해제
+};
+
 psBtn.addEventListener("click", handlePlayAndStop);
 volumeBtn.addEventListener("click", handleSound);
 volumeRange.addEventListener("input", handleVolume);
@@ -128,3 +144,6 @@ timeline.addEventListener("change", timelineChange);
 
 fullScreenBtn.addEventListener("click", fullScreenClick);
 //전체화면, 전체화면 종료
+
+window.addEventListener("keydown", WindowKeyDown);
+//키보드 단축키
