@@ -1,20 +1,16 @@
 const video = document.querySelector("video");
+const videoContainer = document.getElementById("videoContainer");
 const videoController = document.getElementById("videoController");
 const psBtn = videoController.querySelector("#playPauseBtn");
+const currentTime = videoController.querySelector("#currentTime");
+const totalTime = videoController.querySelector("#totalTime");
+const timeline = videoController.querySelector("#timeline");
 const volumeBtn = videoController.querySelector("#volume");
 const volumeRange = videoController.querySelector("#volumeRange");
+const fullScreenBtn = videoController.querySelector("#fullScreenBtn");
 
 let volumeValue = 0.5;
 video.volume = volumeValue;
-
-const currentTime = document.getElementById("currentTime");
-const totalTime = document.getElementById("totalTime");
-const timeline = document.getElementById("timeline");
-
-let playAgain = false;
-
-const fullScreenBtn = document.getElementById("fullScreen");
-const videoBox = document.getElementById("videoBox");
 
 const handlePlayAndStop = () => {
   if (video.paused) {
@@ -24,6 +20,37 @@ const handlePlayAndStop = () => {
     video.pause();
     psBtn.className = "fas fa-play";
   }
+};
+
+const timeFormat = (seconds) =>
+  new Date(seconds * 1000).toISOString().substr(11, 8);
+
+const handleTotalTime = () => {
+  if (Math.floor(video.duration) < 3600) {
+    totalTime.innerText = timeFormat(Math.floor(video.duration)).substr(3);
+  } else {
+    totalTime.innerText = timeFormat(Math.floor(video.duration)).substr(0, 5);
+  }
+  timeline.max = Math.floor(video.duration);
+};
+
+const handleCurrentTIme = () => {
+  if (Math.floor(video.currentTime) < 3600) {
+    currentTime.innerText = timeFormat(Math.floor(video.currentTime)).substr(3);
+  } else {
+    currentTime.innerText = timeFormat(Math.floor(video.currentTime)).substr(
+      0,
+      5
+    );
+  }
+  timeline.value = Math.floor(video.currentTime);
+};
+
+const handleTimeline = (event) => {
+  const {
+    target: { value }
+  } = event;
+  video.currentTime = value;
 };
 
 const handleSound = () => {
@@ -54,96 +81,34 @@ const handleVolume = (event) => {
   video.volume = volumeValue = value;
 };
 
-// 동영상 시간
-const formatTime = (seconds) => {
-  let N;
-  if (video.duration >= 36000) {
-    N = 11;
-  } else if (video.duration >= 3600) {
-    N = 12;
-  } else if (video.duration >= 600) {
-    N = 14;
+const handleFullScreen = () => {
+  const fullscreen = document.fullscreenElement;
+  if (fullscreen) {
+    document.exitFullscreen();
+    fullScreenBtn.className = "fas fa-expand";
   } else {
-    N = 15;
-  } //동영상 전체시간(video.duration)기준으로 표시되는 시간단위 조절
-  return new Date(seconds * 1000).toISOString().substring(N, 19);
-};
-
-const timeUpdate = () => {
-  currentTime.innerText = formatTime(Math.floor(video.currentTime));
-
-  timeline.value = Math.floor(video.currentTime);
-
-  totalTime.innerText = formatTime(Math.floor(video.duration));
-};
-
-const loadedMetaData = async () => {
-  currentTime.innerText = formatTime(
-    Math.floor(video.duration) - Math.floor(video.duration)
-  ); // 시작시 동영상 현재시간 = 전체시간 - 전체시간
-  totalTime.innerText = formatTime(Math.floor(video.duration));
-
-  timeline.max = await Math.floor(video.duration);
-};
-
-const timelineInput = (event) => {
-  const {
-    target: { value } // 타입라인 막대를 조절한 값
-  } = event;
-
-  video.currentTime = value;
-  // 타임라인 막대에 따라 실제 영상시간 조절
-
-  video.pause();
-  // 타임라인 막대 조절 중에는 영상 일시정지
-};
-
-const timelineChange = (event) => {
-  playAgain ? video.play() : video.pause();
-};
-/* 타임라인 막대 조절 후 다시재생시작 or 정지상태 유지 여부 결정
- (타임라인 막대 조절 전 동영상이 재생중인지 정지인지에 따라) */
-
-const fullScreenClick = () => {
-  const fullScreen = document.fullscreenElement;
-  //현재 전체화면상태인지 파악
-  if (fullScreen) {
-    document.exitFullscreen(); //전체화면 해제
-    fullScreenBtn.innerText = "전체화면";
-  } else {
-    videoBox.requestFullscreen(); // 전체화면으로 변경
-    fullScreenBtn.innerText = "전체화면 종료";
+    videoContainer.requestFullscreen();
+    fullScreenBtn.className = "fas fa-compress";
   }
 };
 
-const WindowKeyDown = (event) => {
-  if (event.code === "KeyF") {
-    fullScreenClick();
-  } // F : 동영상 전체화면/전체화면 해제
-  if (event.code === "Escape") {
-    const fullScreen = document.fullscreenElement;
-    //현재 전체화면상태인지 파악
-    if (fullScreen) {
-      document.exitFullscreen(); //전체화면 해제
-      fullScreenBtn.innerText = "전체화면";
-    }
-  } // Esc :전체화면 상태인 경우 전체화면 해제
+const handleKeyboard = (e) => {
+  if (e.key === " ") {
+    handlePlayAndStop();
+  } else if (e.key === "f") {
+    videoContainer.requestFullscreen();
+    fullScreenBtn.className = "fas fa-compress";
+  } else if (e.key === "Escape") {
+    document.exitFullscreen();
+    fullScreenBtn.className = "fas fa-expand";
+  }
 };
 
 psBtn.addEventListener("click", handlePlayAndStop);
+video.addEventListener("loadedmetadata", handleTotalTime);
+video.addEventListener("timeupdate", handleCurrentTIme);
+timeline.addEventListener("input", handleTimeline);
 volumeBtn.addEventListener("click", handleSound);
 volumeRange.addEventListener("input", handleVolume);
-
-video.addEventListener("timeupdate", timeUpdate);
-video.addEventListener("loadedmetadata", loadedMetaData);
-//비디오 '재생시간/전체시간'
-
-timeline.addEventListener("input", timelineInput);
-timeline.addEventListener("change", timelineChange);
-// 비디오 타임라인 조절 막대
-
-fullScreenBtn.addEventListener("click", fullScreenClick);
-//전체화면, 전체화면 종료
-
-window.addEventListener("keydown", WindowKeyDown);
-//키보드 단축키
+fullScreenBtn.addEventListener("click", handleFullScreen);
+window.addEventListener("keyup", handleKeyboard);
